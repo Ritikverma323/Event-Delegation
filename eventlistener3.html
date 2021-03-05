@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="outer">
+      <ul class="inner">
+        <li>
+          <a href="#">click 1</a>
+        </li>
+        <li>
+          <a href="#">click 2</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+     
+    
+
+      const liElement=document.querySelectorAll('.outer');
+      liElement.forEach(function(element){
+          //  element.addEventListener('click',(e)=>{
+          //   console.log("this", this);
+          // // element on which event is register it will always give outer
+          // console.log("event target", e.target);
+          // // element on which we click that fire this event listner
+          // console.log("event current target ", e.currentTarget);
+          // // element on which event is register it will always give outer
+          // console.log('delegated target', e.delegatedTarget)
+          // console.log("related target",e.relatedTarget)
+          //  })
+
+            element.addEventListener('click',function(e){
+              console.log("this", this);
+          // element on which event is register it will always give outer
+          console.log("event target", e.target);
+          // element on which we click that fire this event listner
+          console.log("event current target ", e.currentTarget);
+          // element on which event is register it will always give outer
+          console.log('delegated target', e.delegatedTarget)
+          console.log("related target",e.relatedTarget)
+          })
+      })
+
+      // e.currentTarget
+      // event.delegateTarget
+      // event.relatedTarget
+    </script>
+  </body>
+</html>
